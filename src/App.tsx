@@ -1,13 +1,16 @@
-import Hero from "./components/container/HeroSection";
+import Header from './components/layout/Header';
 
-function App() {
+import Hero from './components/container/HeroSection';
+import AboutSection from './components/container/AboutSection/About';
+
+export default function App() {
   return (
     <>
-      <h1 className="text-3xl">code here</h1>
-      {/* example */}
-      <Hero />
+      <Header />
+      <main>
+        <Hero />
+        <AboutSection />
+      </main>
     </>
   );
 }
-
-export default App;
