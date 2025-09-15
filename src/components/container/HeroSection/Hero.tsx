@@ -17,25 +17,35 @@ export default function Hero({
 }: HeroProps) {
   return (
     <section className='pt-32 pb-16'>
-      <div className='mx-auto max-w-7xl px-6 flex flex-col-reverse lg:flex-row items-center gap-12'>
-        {/* LEFT */}
-        <div className='w-full lg:w-1/2 text-center lg:text-left'>
-          <h1 className='mb-4 text-4xl leading-[1.15] font-bold md:text-6xl'>
+      {/* mobile: column (text -> image), desktop: row (left | right) */}
+      <div className='mx-auto max-w-7xl px-6 flex flex-col lg:flex-row items-center gap-12'>
+        {/* LEFT (Text) */}
+        <div className='w-full lg:w-1/2 text-left lg:text-left'>
+          <h1 className='mb-4 text-3xl md:text-5xl leading-[1.15] font-bold'>
             {title} <br />
             <span className='text-[#FF5C36]'>{highlight}</span>
           </h1>
-          <p className='mb-6 text-base md:text-lg text-gray-700'>{subtitle}</p>
+          <p className='mb-6 text-base md:text-lg text-gray-700 dark:text-gray-300'>
+            {subtitle}
+          </p>
 
-          {/* Pakai komponen Button */}
-          <Button href={ctaHref}>Let’s Talk</Button>
+          <Button
+            href={ctaHref}
+            size='lg' // default mobile: besar
+            className='w-full md:w-[250px] md:h-11 md:px-6 md:text-sm'
+          >
+            Let’s Talk
+          </Button>
         </div>
 
-        {/* RIGHT */}
-        <div className='w-full lg:w-1/2 flex justify-center'>
+        {/* RIGHT (Image) */}
+        <div className='w-full lg:w-1/2 flex justify-center mt-8 lg:mt-0'>
           <img
             src={imageSrc}
             alt='Hero Illustration'
             className='w-full max-w-md'
+            loading='eager'
+            decoding='async'
           />
         </div>
       </div>

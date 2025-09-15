@@ -7,10 +7,10 @@ body {
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 }
 
-/* Marquee keyframes */
+/* Marquee keyframes (bergerak dari kiri ke kanan) */
 @keyframes marquee {
   0% {
-    transform: translateX(50%);
+    transform: translateX(0%);
   }
   100% {
     transform: translateX(-50%);

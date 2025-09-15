@@ -61,7 +61,7 @@ export default function Header() {
                 ))}
 
                 {/* CTA (pakai Button) */}
-                <Button href='#contact' className='mt-4 text-center'>
+                <Button size='sm' href='#contact' className='mt-4 text-center'>
                   Let’s Talk
                 </Button>
               </nav>
