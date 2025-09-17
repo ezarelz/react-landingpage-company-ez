@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Button from '../ui/Button/Button';
+import { Button } from '@/components/ui/Button';
 
 const NAV = [
   { href: '#about', label: 'About' },
-  { href: '#service', label: 'Service' },
+  { href: '#services', label: 'Service' },
   { href: '#projects', label: 'Projects' },
   { href: '#testimonials', label: 'Testimonials' },
   { href: '#faq', label: 'FAQ' },

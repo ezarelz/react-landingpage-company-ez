@@ -37,21 +37,21 @@ type CardProps = {
 
 function ProcessCard({ step, open, onToggle }: CardProps) {
   return (
-    <div className='max-w-[520px] rounded-2xl border border-gray-200 bg-white shadow-sm px-5 py-4 md:px-6 md:py-5'>
+    <div className='max-w-[520px] rounded-2xl border border-gray-200 bg-white shadow-sm px-5 py-4 md:px-6 md:py-5 dark:bg-black'>
       <button
         type='button'
         className='w-full flex items-center justify-between gap-4'
         onClick={onToggle}
         aria-expanded={open}
       >
-        <h3 className='text-base md:text-lg font-semibold text-gray-900'>
+        <h3 className='text-base md:text-lg font-semibold text-gray-900 dark:text-white'>
           {step.title}
         </h3>
         <Chevron open={open} />
       </button>
 
       <div className={open ? 'mt-1 md:mt-2 block' : 'hidden'}>
-        <p className='text-sm text-gray-500'>{step.desc}</p>
+        <p className='text-sm text-gray-500 dark:text-white'>{step.desc}</p>
       </div>
     </div>
   );
@@ -81,10 +81,10 @@ const [openMap, setOpenMap] = useState<boolean[]>(
       <div className='mx-auto max-w-7xl px-6'>
         {/* Heading */}
         <div className='text-center mb-10'>
-          <h2 className='text-3xl md:text-4xl font-bold text-gray-900'>
+          <h2 className='text-3xl md:text-4xl font-bold text-gray-900 dark:text-white'>
             Our Process
           </h2>
-          <p className='mt-2 text-gray-600'>
+          <p className='mt-2 text-gray-600 dark:text-white'>
             Clear steps. Smart execution. Results you can count on.
           </p>
         </div>
@@ -93,7 +93,7 @@ const [openMap, setOpenMap] = useState<boolean[]>(
         <div className='md:hidden relative'>
           {/* vertical line */}
           <div
-            className='absolute left-5 top-0 bottom-0 w-px bg-gray-300'
+            className='absolute left-5 top-0 bottom-0 w-px bg-gray-300 dark:bg-[#252B37]'
             aria-hidden='true'
           />
           <ul className='space-y-8'>
@@ -118,7 +118,7 @@ const [openMap, setOpenMap] = useState<boolean[]>(
         <div className='hidden md:block relative'>
           {/* center line */}
           <div
-            className='absolute left-1/2 top-0 bottom-0 w-px bg-gray-300'
+            className='absolute left-1/2 top-0 bottom-0 w-px bg-gray-300 dark:bg-[#252B37]'
             aria-hidden='true'
           />
 

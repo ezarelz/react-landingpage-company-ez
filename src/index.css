@@ -7,6 +7,12 @@ body {
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
 }
 
+/* Tambahkan palet brand kamu */
+@theme {
+  --color-brand: #ff5c36;
+  --color-brand-600: #ff3f17; /* untuk hover */
+}
+
 /* Marquee keyframes (bergerak dari kiri ke kanan) */
 @keyframes marquee {
   0% {

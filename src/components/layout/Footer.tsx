@@ -58,7 +58,6 @@ function SocialIcon({ type, href, label }: SocialProps) {
           absolute inset-0
           h-10 w-[208px] max-w-none   /* ⬅️ juga di dark */
           select-none pointer-events-none
-          transition-transform group-hover:scale-105
           hidden dark:block
         '
         style={{ transform: `translateX(-${x}px)` }}
@@ -85,7 +84,7 @@ export default function Footer() {
               <a
                 key={item.href}
                 href={item.href}
-                className='hover:underline focus:outline-none focus:ring-2 focus:ring-[#FF5C36] rounded'
+                className='hover:underline focus:outline-none'
               >
                 {item.label}
               </a>

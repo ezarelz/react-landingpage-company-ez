@@ -1,8 +1,15 @@
 import Header from './components/layout/Header';
 import Hero from './components/container/HeroSection';
 import AboutSection from './components/container/AboutSection/About';
-import ProcessSection from './components/container/ProcessSection/Process';
+
 import Footer from './components/layout/Footer';
+import { Services } from './components/ServiceSection';
+import Contact from './components/container/ContactSection';
+import IndustrySection from './components/IndustrySection/Industry';
+import ProjectsSection from './components/ProjectsSection';
+import FAQSection from './components/container/FaqSection/Faq';
+import ProcessSection from './components/container/ProcessSection/Process';
+import Testimonials from './components/container/TestimonialsSection/Testimonials';
 
 export default function App() {
   return (
@@ -17,6 +24,13 @@ export default function App() {
         <Hero />
         <AboutSection />
         <ProcessSection />
+        <Services />
+        <IndustrySection />
+        <ProjectsSection />
+        <Testimonials />
+        <FAQSection />
+        {/* Contact */}
+        <Contact />
       </main>
 
       {/* FOOTER */}
